@@ -251,7 +251,7 @@ class @Mercury.Regions.Full extends Mercury.Region
         element = jQuery(element)
         if snippet = Mercury.Snippet.find(element.data("snippet"))
           snippet.data = element.html()
-        element.html("{% include #{element.data("snippet")} version='#{element.data("version")}' %}")
+        element.html("[#{element.data("snippet")}/#{element.data("version")}]")
         element.attr({contenteditable: null, 'data-version': null})
 
       # get the html before removing the markers
